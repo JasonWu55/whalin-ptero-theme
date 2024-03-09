@@ -45,6 +45,7 @@ interface RouteDefinition {
     name: string | undefined;
     component: React.ComponentType;
     exact?: boolean;
+    iconProp?: IconProp;
 }
 
 interface ServerRouteDefinition extends RouteDefinition {
