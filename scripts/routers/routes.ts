@@ -1,3 +1,4 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import React, { lazy } from 'react';
 import ServerConsole from '@/components/server/console/ServerConsoleContainer';
 import DatabasesContainer from '@/components/server/databases/DatabasesContainer';
@@ -13,6 +14,21 @@ import AccountApiContainer from '@/components/dashboard/AccountApiContainer';
 import AccountSSHContainer from '@/components/dashboard/ssh/AccountSSHContainer';
 import ActivityLogContainer from '@/components/dashboard/activity/ActivityLogContainer';
 import ServerActivityLogContainer from '@/components/server/ServerActivityLogContainer';
+import {
+    faBackward,
+    faClock,
+    faCogs,
+    faDatabase,
+    faEdit,
+    faFolder,
+    faKey,
+    faNetworkWired,
+    faPaperclip,
+    faPassport,
+    faPlayCircle,
+    faTerminal,
+    faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 // Each of the router files is already code split out appropriately — so
 // all of the items above will only be loaded in when that router is loaded.
@@ -49,21 +65,25 @@ export default {
             name: '帳號',
             component: AccountOverviewContainer,
             exact: true,
+            iconProp: faUser,
         },
         {
             path: '/api',
             name: 'API 憑證',
             component: AccountApiContainer,
+            iconProp: faPassport,
         },
         {
             path: '/ssh',
             name: 'SSH 金鑰',
             component: AccountSSHContainer,
+            iconProp: faKey,
         },
         {
             path: '/activity',
             name: '活動',
             component: ActivityLogContainer,
+            iconProp: faPaperclip,
         },
     ],
     server: [
@@ -73,72 +93,84 @@ export default {
             name: '控制台',
             component: ServerConsole,
             exact: true,
+            iconProp: faTerminal,
         },
         {
             path: '/files',
             permission: 'file.*',
             name: '檔案',
             component: FileManagerContainer,
+            iconProp: faFolder,
         },
         {
             path: '/files/:action(edit|new)',
             permission: 'file.*',
             name: undefined,
             component: FileEditContainer,
+            iconProp: faEdit,
         },
         {
             path: '/databases',
             permission: 'database.*',
             name: '資料庫',
             component: DatabasesContainer,
+            iconProp: faDatabase,
         },
         {
             path: '/schedules',
             permission: 'schedule.*',
             name: '排程',
             component: ScheduleContainer,
+            iconProp: faClock,
         },
         {
             path: '/schedules/:id',
             permission: 'schedule.*',
             name: undefined,
             component: ScheduleEditContainer,
+            iconProp: faClock,
         },
         {
             path: '/users',
             permission: 'user.*',
             name: '使用者',
             component: UsersContainer,
+            iconProp: faUser,
         },
         {
             path: '/backups',
             permission: 'backup.*',
             name: '備份',
             component: BackupContainer,
+            iconProp: faBackward,
         },
         {
             path: '/network',
             permission: 'allocation.*',
             name: '網路',
             component: NetworkContainer,
+            iconProp: faNetworkWired,
         },
         {
             path: '/startup',
             permission: 'startup.*',
             name: '啟動',
             component: StartupContainer,
+            iconProp: faPlayCircle,
         },
         {
             path: '/settings',
             permission: ['settings.*', 'file.sftp'],
             name: '設定',
             component: SettingsContainer,
+            iconProp: faCogs,
         },
         {
             path: '/activity',
             permission: 'activity.*',
             name: '活動',
             component: ServerActivityLogContainer,
+            iconProp: faPaperclip,
         },
     ],
 } as Routes;

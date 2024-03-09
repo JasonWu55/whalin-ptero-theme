@@ -20,6 +20,8 @@ import { useLocation } from 'react-router';
 import ConflictStateRenderer from '@/components/server/ConflictStateRenderer';
 import PermissionRoute from '@/components/elements/PermissionRoute';
 import routes from '@/routers/routes';
+import Sidebar from '@/components/Sidebar';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export default () => {
     const match = useRouteMatch<{ id: string }>();
@@ -74,7 +76,7 @@ export default () => {
             ) : (
                 <>
                     <CSSTransition timeout={150} classNames={'fade'} appear in>
-                        <SubNavigation>
+                        <Sidebar>
                             <div>
                                 {routes.server
                                     .filter((route) => !!route.name)
@@ -82,11 +84,17 @@ export default () => {
                                         route.permission ? (
                                             <Can key={route.path} action={route.permission} matchAny>
                                                 <NavLink to={to(route.path, true)} exact={route.exact}>
+                                                    <div className='icon'>
+                                                        <FontAwesomeIcon icon={route.iconProp as IconProp} />
+                                                    </div>
                                                     {route.name}
                                                 </NavLink>
                                             </Can>
                                         ) : (
                                             <NavLink key={route.path} to={to(route.path, true)} exact={route.exact}>
+                                                <div className='icon'>
+                                                    <FontAwesomeIcon icon={route.iconProp as IconProp} />
+                                                </div>
                                                 {route.name}
                                             </NavLink>
                                         )
@@ -98,7 +106,7 @@ export default () => {
                                     </a>
                                 )}
                             </div>
-                        </SubNavigation>
+                        </Sidebar>
                     </CSSTransition>
                     <InstallListener />
                     <TransferListener />
