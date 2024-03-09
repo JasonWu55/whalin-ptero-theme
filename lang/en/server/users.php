@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'permissions' => [
+        'websocket_*' => '允許訪問該伺服器的 WebSocket。',
+        'control_console' => '允許用戶發送數據到伺服器控制台。',
+        'control_start' => '允許用戶啟動伺服器實例。',
+        'control_stop' => '允許用戶停止伺服器實例。',
+        'control_restart' => '允許用戶重新啟動伺服器實例。',
+        'control_kill' => '允許用戶終止伺服器實例。',
+        'user_create' => '允許用戶創建該伺服器的新用戶帳戶。',
+        'user_read' => '允許用戶查看與該伺服器關聯的用戶。',
+        'user_update' => '允許用戶修改與該伺服器關聯的其他用戶。',
+        'user_delete' => '允許用戶刪除與該伺服器關聯的其他用戶。',
+        'file_create' => '允許用戶創建新文件和目錄的權限。',
+        'file_read' => '允許用戶查看與該伺服器實例關聯的文件和文件夾，以及查看其內容。',
+        'file_update' => '允許用戶更新與伺服器關聯的文件和文件夾。',
+        'file_delete' => '允許用戶刪除文件和目錄的權限。',
+        'file_archive' => '允許用戶創建文件存檔和解壓現有存檔的權限。',
+        'file_sftp' => '允許用戶使用 SFTP 客戶端執行上述文件操作。',
+        'allocation_read' => '允許訪問伺服器分配管理頁面。',
+        'allocation_update' => '允許用戶修改伺服器分配的權限。',
+        'database_create' => '允許用戶為伺服器創建新數據庫的權限。',
+        'database_read' => '允許用戶查看伺服器數據庫的權限。',
+        'database_update' => '允許用戶修改數據庫的權限。如果用戶沒有“查看密碼”權限，則他們將無法修改密碼。',
+        'database_delete' => '允許用戶刪除數據庫實例的權限。',
+        'database_view_password' => '允許用戶查看系統中數據庫密碼的權限。',
+        'schedule_create' => '允許用戶為伺服器創建新計劃的權限。',
+        'schedule_read' => '允許用戶查看伺服器計劃的權限。',
+        'schedule_update' => '允許用戶修改現有伺服器計劃的權限。',
+        'schedule_delete' => '允許用戶刪除伺服器計劃的權限。',
+    ],
+];
