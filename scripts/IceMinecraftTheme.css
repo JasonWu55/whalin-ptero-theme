@@ -1,7 +1,7 @@
 :root {
     --main-color: #261b00;
-    --secundary-color: #391f00;
-    --tertiary-color: #423000;
+    --secundary-color: #261b00;
+    --tertiary-color: #261b00;
     --bacground-url: url("https://panel.whalin.cc/files/themes/whalin-ptero/back.jpg");
   }
   
@@ -51,7 +51,14 @@
   }
   
   div.style-module_2XbmHEcn.group {
+    /*
     background-color: var(--secundary-color);
+    */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
   }
   
   div.w-full.bg-neutral-900.shadow-md.overflow-x-auto {
