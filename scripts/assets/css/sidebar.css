@@ -41,10 +41,17 @@ You should have received a copy of the GNU General Public License along with Noo
     margin: 0;
     padding: 0;
     width: var(--sidebar-size);
+    /*
     background-color: var(--color-tertiary);
+    */
     overflow: auto;
     z-index: 9999;
     height: calc(100vh - 3.5rem);
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
 }
 
 .content-container {
