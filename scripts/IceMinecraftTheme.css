@@ -49,13 +49,6 @@
     backdrop-filter: blur(9.2px);
     -webkit-backdrop-filter: blur(9.2px);
   }
-  div.style-module_RcP2_Fvj {
-    background-color: var(--main-color) !important;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-  }
   div.style-module_1n_DiqmT {
     background-color: var(--main-color) !important;
     border-radius: 16px;
