@@ -30,7 +30,7 @@ You should have received a copy of the GNU General Public License along with Noo
 }
 
 :root {
-    --sidebar-size: 220px;
+    --sidebar-size: 180px;
 }
 .nav-bar {
     display: none;
